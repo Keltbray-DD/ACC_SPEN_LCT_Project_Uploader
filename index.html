@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="js/variables.js"></script>
+  <script src="js/getData.js"></script>
+  <script src="js/createFolder.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <link rel="icon" href="./assets/media/Keltbray-logo_single.png" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include PapaParse -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/eefbfa2a22.js" crossorigin="anonymous"></script>
+
+  <title>Digital Delivery Tool - ACC SPEN LCT Job Uploader</title>
+</head>
+<header>
+  <div class="header-section">
+      <img alt="" id="headerlogo" class="logo_H" src="./assets/media/Keltbray-logo_single.png">
+      <h2 class="branding">Keltbray <br>DD Hub</h2>
+  </div>
+  <div class="header-section" id="main_header">
+      <h1>ACC SPEN LCT Job Uploader</h1>
+  </div>
+  <div class="header-section">
+      <h3></h3>
+  </div>
+</header>
+
+<body>
+  
+<div class="form-container">
+  <h3 class="containerH2">This tool is for adding jobs to the SPEN Program - LCT Loop Services ACC Project</h3>
+</div>
+
+<div class="form-container" id="newForm">
+  <h3 class="containerH2">New Job Details</h3>
+  <label class="projectLabel" id="label_subprojectname" for="input_folder" aria-hidden="false"> Please enter job name </label>
+  <div class="one-line">
+
+    <p> CCT </p>
+    <input id="input_caseNumber" type="text" placeholder="Case Number">
+    <p> - </p>
+    <input id="input_caseAddress" type="text" placeholder="Site Address">
+  </div>
+
+  <label class="projectLabel" id="label_region" for="input_region" aria-hidden="false"> Please select which region the job will be added to </label>
+  <select name="region" id="input_region">
+    <option value=""></option>
+  </select>
+  <label class="projectLabel" id="label_state" for="input_state" aria-hidden="false"> Please select which state the job will be</label>
+  <select name="state" id="input_state">
+
+  </select>
+  <button id="submitBtn" class="submittButton" onclick="createFolderStructure()">Add job</button>
+  <div  class="statusUpdate" id="statusUpdate"></div>
+  <button id="newFolderLinkBtn" class="submittButton" onclick="openFolderLink()">View job folder on ACC</button>
+</div>
+
+</body>
+</html>
